@@ -56,3 +56,11 @@ class Dialog {
     };
   }
 }
+
+(() => {
+  const dialogTriggers = document.querySelectorAll(".dialog-trigger");
+
+  for (const dialogTrigger of dialogTriggers) {
+    dialogTrigger.addEventListener("click", () => new Dialog(dialogTrigger));
+  }
+})();
